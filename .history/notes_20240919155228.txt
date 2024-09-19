@@ -1,0 +1,4 @@
+superuser: Director
+pasword: admin@123!
+
+Please take a look at the Readme.md file
