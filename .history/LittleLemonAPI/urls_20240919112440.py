@@ -1,0 +1,29 @@
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from .views import (
+    CategoryViewSet, 
+    MenuItemViewSet, 
+    CartViewSet, 
+    OrderViewSet, 
+    OrderItemViewSet, 
+    UserGroupViewSet, 
+    CustomObtainAuthToken, 
+    UserViewSet
+)
+
+router = DefaultRouter()
+router.register(r'categories', CategoryViewSet)
+router.register(r'menu-items', MenuItemViewSet)
+router.register(r'users', UserViewSet)
+#router.register(r'orders', OrderViewSet)
+#router.register(r'cart', CartViewSet)
+router.register(r'order-items', OrderItemViewSet)
+router.register(r'user-group', UserGroupViewSet, basename='user-group')
+router.register(r'cart', CartViewSet, basename='cart')
+router.register(r'orders', OrderViewSet, basename='order')
+
+urlpatterns = [
+    path('', include(router.urls)),
+    path('api-token-auth/', CustomObtainAuthToken.as_view(), name='api_token_auth'),
+    path('menuitems/add/', MenuItemViewSet.as_view({'post': 'add'}), name='menuitem-add'),
+]
