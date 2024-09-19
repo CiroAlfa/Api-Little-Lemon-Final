@@ -1,0 +1,39 @@
+superuser: Director
+pasword: admin@123!
+
+other users
+manager1
+pasword:admin@123!
+
+manager2
+pasword:admin@123!
+
+Manager3
+pasword:admin@123!
+
+Rider1 
+pasword: assistant@123!
+
+Rider2
+pasword: assistant@123!
+
+Rider3
+pasword: assistant@123!
+
+Rider4
+pasword: assistant@123!
+
+"username": "customer",
+"password": "client@123!",
+
+"username": "customer1",
+  "password": "client@123!",
+  "email": "User@gmail.com"
+
+  {
+  "username": "customer2",
+  "password": "client@123!",
+  "email": "User@gmail.com"
+}
+
+Please take a look at the Readme.md file
